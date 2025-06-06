@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Samrit Sarkar</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">SAMRIT SARKAR</div>
+        <nav>
+            <!-- <a href="#">Home</a> -->
+            <!-- <a href="#">Links</a> -->
+            <!-- <a href="https://samritsarkar.com" target="_blank">Visit My Site</a> -->
+            <button id="toggleMode"><i class="fa-solid fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="profile.jpg" alt="Profile Image">
+        <div class="intro">
+            <h1>Hi, I'm <span>Samrit Sarkar</span></h1>
+            <p>I'm a <strong>B.E.</strong> in <strong>Computer Science and Engineering</strong> student <strong>at Sapthagiri NPS University, Bengaluru</strong>.</p>
+            <p>I enjoy learning new things and writing code. Follow me!</p>
+            <div class="social-icons">
+                <!-- <a href="https://github.com/Samrithere" target="_blank"><i class="fab fa-github"></i></a> -->
+                <a href="https://www.linkedin.com/in/samrit-sarkar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Samrithere_2005" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/samrithere/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:samritsarkar2005@gmail.com"><i class="fas fa-envelope"></i></a> <!-- Gmail icon -->
+                <!-- <a href="tel:+910000000000"><i class="fas fa-phone"></i></a> -->
+
+            </div>
+        </div>
+    </section>
+    <!--
+  <section class="posts">
+    <h2>Recent Posts</h2>
+    <div class="post-grid">
+      <div class="post-card"><img src="images/post1.jpg" alt="Post Image 1"></div>
+      <div class="post-card"><img src="images/post2.jpg" alt="Post Image 2"></div>
+      <div class="post-card"><img src="images/post3.jpg" alt="Post Image 3"></div>
+    </div>
+  </section>
+-->
+
+    <script>
+        const toggleModeBtn = document.getElementById('toggleMode');
+        const body = document.body;
+        let darkMode = true;
+
+        toggleModeBtn.addEventListener('click', () => {
+            darkMode = !darkMode;
+            if (darkMode) {
+                body.style.backgroundColor = '#100a5c';
+                body.style.color = '#ffffff';
+                document.querySelectorAll('nav a').forEach(a => a.style.color = '#ffcc00');
+                toggleModeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            } else {
+                body.style.backgroundColor = '#f5f5f5';
+                body.style.color = '#000000';
+                document.querySelectorAll('nav a').forEach(a => a.style.color = '#003366');
+                toggleModeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+        });
+    </script>
+</body>
+
+</html>
